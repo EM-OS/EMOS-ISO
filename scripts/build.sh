@@ -1,13 +1,21 @@
 #!/bin/bash
+
 set -e
 
-ISO_NAME="EMOS-$(date +%Y%m%d)"
-OUT_DIR="../out"
+# Paths relative to this script
+cd "$(dirname "$0")"
+rootdir="$(pwd)/.."
+outdir="$rootdir/out"
+workdir="$rootdir/work"
+iso_label="EMOS"
 
-echo "Building Arch ISO..."
 
-mkdir -p "$OUT_DIR"
 
-mkarchiso -v -o "$OUT_DIR" ../configs/releng
+echo "==> Building ISO..."
+mkarchiso \
+  -v \
+  -w "$workdir" \
+  -o "$outdir" \
+  "$rootdir"
 
-echo "ISO build complete: $OUT_DIR/$(ls $OUT_DIR)"
+echo "✅ ISO build complete! Find it in: $outdir"

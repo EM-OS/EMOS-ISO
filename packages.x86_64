@@ -129,13 +129,28 @@ zsh
 
 
 
+#DE
+plasma-meta
+sddm
 
-#gui
-xorg-server
-xfce4
-xfce4-goodies
-lightdm
-lightdm-gtk-greeter
+
+#fonts
+ttf-dejavu
+ttf-liberation
+noto-fonts
+noto-fonts-cjk
+noto-fonts-emoji
+noto-fonts-extra
+ttf-bitstream-vera
+ttf-droid
+ttf-font-awesome
+ttf-hack
+ttf-inconsolata
+ttf-roboto
+ttf-ubuntu-font-family
+fontconfig
+freetype2
+
 
 #audio
 pipewire
@@ -144,31 +159,100 @@ pipewire-pulse
 pipewire-alsa
 pipewire-jack
 pavucontrol
-
+wireplumber
+alsa-ucm-conf
 
 #bluetooth
 bluez
 bluez-utils
+blueman
 
-
+#firewall
+firewalld
+python-pyqt5
+python-capng
 
 #printing
 cups
 ghostscript
+cups-pdf
+system-config-printer
+hplip
+sane
+simple-scan
 
 
 
+#gpu (add appropriate drivers)
+mesa
+vulkan-radeon
+libva-mesa-driver
+mesa-vdpau
+xf86-video-amdgpu
+xf86-video-ati
+xf86-video-fbdev
+xf86-video-nouveau
+xf86-video-vesa
+vulkan-intel
+libva-intel-driver
+intel-media-driver
 
-#gpu
 
 
-
+#System tools
+acpi
+acpid
+efibootmgr
+networkmanager
+network-manager-applet
+curl
+os-prober
+git
+wget
+bash-completion
+nfs-utils
+linux-headers
+gvfs
+gvfs-mtp
+gvfs-gphoto2
+gvfs-nfs
+gvfs-smb
 
 
 #softwares
-networkmanager
 kitty
 nano
 neovim
 kate
 xdg-user-dirs
+firefox
+thunar-archive-plugin
+file-roller
+evince
+ristretto
+mousepad
+galculator
+viewnior
+vlc
+transmission-gtk
+screenfetch
+gparted
+ark
+mpv
+htop
+nvtop
+
+
+
+#vm support
+
+#spice
+spice-vdagent
+
+#vmware
+open-vm-tools
+xf86-input-vmmouse
+xf86-video-vmware
+xf86-video-qxl
+
+
