@@ -73,6 +73,12 @@ echo -e "root:x:0:root\nadm:x:4:$user\nwheel:x:10:$user\nuucp:x:14:$user\n$user:
 touch "$airootfs/gshadow"
 echo -e "root:!*::root\n$user:!*::" > "$airootfs/gshadow"
 
+# Set Kitty as the default terminal in KDE
+mkdir -p "$airootfs/home/$user/.config"
+echo -e "[General]\nTerminalApplication=kitty" > "$airootfs/home/$user/.config/kdeglobals"
+
+
+
 # Grub cfg
 grubcfg="../grub/grub.cfg"
 sed -i 's/default=archlinux/default=emos/' "$grubcfg"

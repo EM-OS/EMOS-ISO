@@ -241,8 +241,10 @@ ark
 mpv
 htop
 nvtop
+konsole
 
-
+#tui
+gum
 
 #vm support
 

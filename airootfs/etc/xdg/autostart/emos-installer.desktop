@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Exec=/usr/local/bin/emos-installer/emos-installer.sh
+Hidden=false
+NoDisplay=false
+X-GNOME-Autostart-enabled=true
+Name=EMOS Installer Autostart
+Comment=Automatically launch EMOS installer on startup
+Terminal=true

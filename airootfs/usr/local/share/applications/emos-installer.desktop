@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=EMOS Installer
+Comment=Launch the EMOS custom Arch installer
+Exec=/usr/local/bin/emos-installer/emos-installer.sh
+Icon=system-install
+Terminal=true
+Type=Application
+Categories=System;
