@@ -18,5 +18,6 @@ case "$wm" in
   "bspwm") pacman -S --noconfirm bspwm sxhkd ;;
   "Openbox") pacman -S --noconfirm openbox obconf ;;
   "xmonad") pacman -S --noconfirm xmonad ;;
+  "Hyprland") pacman -S --noconfirm hyprland ;;
 esac
 EOF

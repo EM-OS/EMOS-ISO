@@ -35,6 +35,8 @@ file_permissions=(
   ["/usr/local/bin/emos-installer/script/04-select_dewm.sh"]="0:0:755"
   ["/usr/local/bin/emos-installer/script/05-install_dewm.sh"]="0:0:755"
   ["/usr/local/bin/emos-installer/script/06-user.sh"]="0:0:755"
-  ["/usr/local/bin/emos-installer/script/07-packages.sh"]="0:0:755"
-  ["/usr/local/bin/emos-installer/script/08-postinstall.sh"]="0:0:755"
+  ["/usr/local/bin/emos-installer/script/07-mirrors.sh"]="0:0:755"
+  ["/usr/local/bin/emos-installer/script/08-audio.sh"]="0:0:755"
+  ["/usr/local/bin/emos-installer/script/09-packages.sh"]="0:0:755"
+  ["/usr/local/bin/emos-installer/script/10-postinstall.sh"]="0:0:755"
 )

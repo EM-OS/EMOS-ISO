@@ -38,8 +38,10 @@ main() {
   run_step "04-select_dewm.sh"
   run_step "05-install_dewm.sh"
   run_step "06-user.sh"
-  run_step "07-packages.sh"
-  run_step "08-postinstall.sh"
+  run_step "07-mirrors.sh"
+  run_step "08-audio.sh"
+  run_step "09-packages.sh"
+  run_step "10-postinstall.sh"
 
   log "Installation complete! You can now reboot into your new EMOS system."
 }
