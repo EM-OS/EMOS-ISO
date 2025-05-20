@@ -8,15 +8,13 @@ echo "[INFO] Selected: $audio_choice"
 
 if [[ "$audio_choice" == "PipeWire (recommended)" ]]; then
   arch-chroot /mnt pacman -S --noconfirm --needed \
-    pipewire pipewire-alsa pipewire-pulse pipewire-jack \
-    wireplumber alsa-utils pavucontrol alsa-ucm-conf pipewire-audio
+    pipewire wireplumber alsa-utils pavucontrol
 
-  arch-chroot /mnt systemctl enable pipewire.socket
-  arch-chroot /mnt systemctl enable pipewire-pulse.socket
+  arch-chroot /mnt systemctl enable wireplumber.service
 
 elif [[ "$audio_choice" == "PulseAudio" ]]; then
   arch-chroot /mnt pacman -S --noconfirm --needed \
-    pulseaudio pulseaudio-alsa alsa-utils pavucontrol
+    pulseaudio alsa-utils pavucontrol
 
 elif [[ "$audio_choice" == "None" ]]; then
   echo "[INFO] No audio packages will be installed."
@@ -25,5 +23,4 @@ else
   exit 1
 fi
 
-echo "[INFO] Audio setup complete."
-
+echo "[INFO] Minimal audio setup complete."

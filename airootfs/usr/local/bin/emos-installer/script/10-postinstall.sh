@@ -7,13 +7,23 @@ log() {
 
 # Run postinstall setup inside chroot
 log "Running post-install configuration..."
-arch-chroot /mnt /bin/bash <<EOF
-ln -sf /usr/share/zoneinfo/\$(cat /tmp/emos_timezone) /etc/localtime
+arch-chroot /mnt /bin/bash <<'EOF'
+# Set timezone
+ln -sf /usr/share/zoneinfo/$(cat /tmp/emos_timezone) /etc/localtime
 hwclock --systohc
+
+# Set locale
 echo "en_US.UTF-8 UTF-8" > /etc/locale.gen
 locale-gen
 echo "LANG=en_US.UTF-8" > /etc/locale.conf
+
+# Enable networking
 systemctl enable NetworkManager
+
+# Install GRUB (UEFI)
+echo "[*] Installing GRUB for UEFI..."
+grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=EMOS
+grub-mkconfig -o /boot/grub/grub.cfg
 EOF
 
 # Ask user if they want to enter chroot

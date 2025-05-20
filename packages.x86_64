@@ -132,7 +132,18 @@ zsh
 #DE
 plasma-meta
 sddm
-
+hyprland
+waybar
+rofi
+wofi
+mako
+grim
+slurp
+wl-clipboard
+xdg-desktop-portal-hyprland
+xdg-desktop-portal-gtk
+qt5-wayland
+qt6-wayland
 
 #fonts
 ttf-dejavu

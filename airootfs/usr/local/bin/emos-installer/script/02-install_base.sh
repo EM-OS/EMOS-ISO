@@ -18,7 +18,9 @@ pacstrap /mnt \
   base-devel \
   dosfstools ntfs-3g exfat-utils \
   udisks2 smartmontools htop acpi git \
-  ufw archlinux-keyring reflector
+  ufw archlinux-keyring reflector \
+  open-vm-tools xf86-input-vmmouse xf86-video-vmware xf86-video-qxl spice-vdagent
+\
 
 log "Generating fstab..."
 genfstab -U /mnt >> /mnt/etc/fstab

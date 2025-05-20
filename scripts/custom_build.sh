@@ -36,9 +36,20 @@ head -n '35' "/usr/lib/sddm/sddm.conf.d/default.conf" > "$airootfs/sddm.conf"
 sed -n '38,137p' "/usr/lib/sddm/sddm.conf.d/default.conf" > "$airootfs/sddm.conf.d/kde_settings.conf"
 
 # Customize SDDM Config
-sed -i 's|^Session=.*|Session=plasma.desktop|' "$airootfs/sddm.conf"
+sed -i 's|^Session=.*|Session=hyprland.desktop|' "$airootfs/sddm.conf"
 sed -i 's|^DisplayServer=.*|DisplayServer=wayland|' "$airootfs/sddm.conf"
 sed -i 's|^Numlock=off|Numlock=on|' "$airootfs/sddm.conf"
+
+
+
+mkdir -p "$airootfs/usr/share/wayland-sessions"
+cat > "$airootfs/usr/share/wayland-sessions/hyprland.desktop" <<EOF
+[Desktop Entry]
+Name=Hyprland
+Comment=Hyprland Wayland compositor
+Exec=Hyprland
+Type=Application
+EOF
 
 # Add User
 user="em"
@@ -74,8 +85,8 @@ touch "$airootfs/gshadow"
 echo -e "root:!*::root\n$user:!*::" > "$airootfs/gshadow"
 
 # Set Kitty as the default terminal in KDE
-mkdir -p "$airootfs/home/$user/.config"
-echo -e "[General]\nTerminalApplication=kitty" > "$airootfs/home/$user/.config/kdeglobals"
+# mkdir -p "$airootfs/home/$user/.config"
+# echo -e "[General]\nTerminalApplication=kitty" > "$airootfs/home/$user/.config/kdeglobals"
 
 
 
