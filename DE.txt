@@ -1,0 +1,83 @@
+Awesome
+			"awesome",
+			"alacritty",
+			"xorg-xinit",
+			"xorg-xrandr",
+			"xterm",
+			"feh",
+			"slock",
+			"terminus-font",
+			"gnu-free-fonts",
+			"ttf-liberation",
+			"xsel",
+
+
+
+
+bspwn
+			"bspwm",
+			"sxhkd",
+			"dmenu",
+			"xdo",
+			"rxvt-unicode",
+
+
+
+budgie
+			"materia-gtk-theme",
+			"budgie",
+			"mate-terminal",
+			"nemo",
+			"papirus-icon-theme",
+
+
+
+
+gnome
+			"gnome",
+			"gnome-tweaks",
+
+hyprland
+			"hyprland",
+			"dunst",
+			"kitty",
+			"uwsm",
+			"dolphin",
+			"wofi",
+			"xdg-desktop-portal-hyprland",
+			"qt5-wayland",
+			"qt6-wayland",
+			"polkit-kde-agent",
+			"grim",
+			"slurp",
+
+i3
+			"i3-wm",
+			"i3lock",
+			"i3status",
+			"i3blocks",
+			"xss-lock",
+			"xterm",
+			"lightdm-gtk-greeter",
+			"lightdm",
+			"dmenu",
+
+
+plasma
+			"plasma-meta",
+			"konsole",
+			"kate",
+			"dolphin",
+			"ark",
+			"plasma-workspace",
+
+xfce4
+			"xfce4",
+			"xfce4-goodies",
+			"pavucontrol",
+			"gvfs",
+			"xarchiver",
+
+
+
+
