@@ -1,6 +1,6 @@
 NAME="EMOS Linux"
 PRETTY_NAME="EMOS Linux"
-ID=rebornos
+ID=emos
 BUILD_ID=rolling
 ANSI_COLOR="38;2;23;147;209"
 HOME_URL="https://rebornos.org/"
