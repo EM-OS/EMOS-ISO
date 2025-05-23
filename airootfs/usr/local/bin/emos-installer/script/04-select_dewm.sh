@@ -1,5 +1,4 @@
 #!/bin/bash
-de=$(gum choose "KDE Plasma" "GNOME" "XFCE" "Cinnamon" "MATE" "LXQt" "Budgie" "None")
-wm=$(gum choose "i3" "Awesome" "bspwm" "Openbox" "xmonad" "Hyprland" "None")
+de=$(gum choose "Awesome" "Bspwm" "Budgie" "Gnome" "Hyprland" "I3" "Plasma" "Xfce4" "None")
 echo "$de" > /tmp/emos_de
-echo "$wm" > /tmp/emos_wm
+

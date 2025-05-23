@@ -51,6 +51,24 @@ Exec=Hyprland
 Type=Application
 EOF
 
+mkdir -p "$airootfs/usr/share/wayland-sessions"
+cat > "$airootfs/usr/share/wayland-sessions/plasmawayland.desktop" <<EOF
+[Desktop Entry]
+Name=Plasma (Wayland)
+Comment=Plasma Desktop using Wayland
+Exec=startplasma-wayland
+Type=Application
+EOF
+
+mkdir -p "$airootfs/usr/share/xsessions"
+cat > "$airootfs/usr/share/xsessions/plasma.desktop" <<EOF
+[Desktop Entry]
+Name=Plasma (X11)
+Comment=Plasma Desktop using X11
+Exec=startplasma-x11
+Type=Application
+EOF
+
 # Add User
 user="em"
 sed -i "s|^User=.*|User=$user|" "$airootfs/sddm.conf"

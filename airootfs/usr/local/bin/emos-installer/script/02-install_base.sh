@@ -7,7 +7,7 @@ log() {
 
 log "Installing base packages with pacstrap..."
 
-pacstrap /mnt \
+pacstrap /mnt  --needed \
   base linux linux-firmware \
   sudo networkmanager \
   grub efibootmgr \

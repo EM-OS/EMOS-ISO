@@ -1,4 +1,10 @@
 #!/bin/bash
+
+#
+# echo -e "\n"
+# chafa --size=90 ../assets/EMOS.svg  # Adjust size as needed
+# echo -e "\n"
+
 gum style --border double --margin "1 2" --padding "1 2"   --border-foreground 99 "Welcome to EMOS Linux Installer"
 
 hostname=$(gum input --placeholder "emos-pc" --prompt "Enter hostname:")

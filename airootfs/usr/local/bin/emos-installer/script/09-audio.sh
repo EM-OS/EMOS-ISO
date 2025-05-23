@@ -7,8 +7,15 @@ audio_choice=$(gum choose --header="Select audio system to install:" \
 echo "[INFO] Selected: $audio_choice"
 
 if [[ "$audio_choice" == "PipeWire (recommended)" ]]; then
+  # Check and remove existing JACK packages
+  if arch-chroot /mnt pacman -Q | grep -q jack; then
+    echo "[INFO] Removing conflicting JACK packages..."
+    arch-chroot /mnt pacman -Rns --noconfirm jack
+  fi
+
   arch-chroot /mnt pacman -S --noconfirm --needed \
-    pipewire wireplumber alsa-utils pavucontrol
+    pipewire pipewire-alsa pipewire-jack pipewire-pulse \
+    gst-plugin-pipewire libpulse wireplumber
 
   arch-chroot /mnt systemctl enable wireplumber.service
 
